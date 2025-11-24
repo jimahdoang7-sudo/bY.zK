@@ -11,6 +11,43 @@
             font-family: 'Segoe UI', sans-serif;
             background: #0d0d0d;
             color: white;
+            scroll-behavior: smooth; /* SMOOTH SCROLL */
+        }
+
+        /* NAVBAR GLASS */
+        .navbar {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: cyan;
+            text-shadow: 0 0 10px cyan;
+        }
+
+        .navbar a {
+            margin-left: 25px;
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            color: cyan;
+            text-shadow: 0 0 10px cyan;
         }
 
         /* HERO */
@@ -65,9 +102,9 @@
             background: white;
         }
 
-        /* SECTION DEFAULT */
+        /* SECTION */
         .section {
-            padding: 60px 20px;
+            padding: 80px 20px;
             max-width: 900px;
             margin: auto;
         }
@@ -88,76 +125,37 @@
             box-shadow: 0 0 15px rgba(0,255,255,0.15);
         }
 
-        /* INFO TERBARU */
-        .news {
-            padding: 80px 20px;
-            background: #000;
-            color: white;
-        }
-
-        .news h2 {
-            font-size: 36px;
-            margin-bottom: 40px;
-            font-weight: bold;
-            text-align: center;
-            color: cyan;
-        }
-
-        .news-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            max-width: 1100px;
-            margin: auto;
-        }
-
-        .news-card {
-            background: #111;
-            border-radius: 14px;
-            padding: 25px;
-            border: 1px solid #222;
-            transition: 0.3s;
-        }
-
-        .news-card:hover {
-            transform: translateY(-6px);
-            border-color: #00ffe1;
-        }
-
-        .news-card h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
-
-        .tanggal {
-            font-size: 14px;
-            opacity: 0.6;
-            margin-bottom: 15px;
-        }
-
-        .btn-read {
-            display: inline-block;
-            padding: 10px 18px;
-            background: #00ffe1;
-            color: #000;
-            text-decoration: none;
-            font-weight: 600;
-            border-radius: 6px;
-            margin-top: 15px;
-        }
-
+        /* FOOTER */
         footer {
             text-align: center;
             padding: 20px;
             color: #bbbbbb;
             font-size: 0.8rem;
         }
+
+        /* SPACER SO NAVBAR NOT COVER CONTENT */
+        .spacer { height: 80px; }
+
     </style>
 </head>
 <body>
 
+    <!-- NAVBAR GLASS -->
+    <div class="navbar">
+        <div class="logo">zK</div>
+        <div class="menu">
+            <a href="#hero">Home</a>
+            <a href="#berita">Berita</a>
+            <a href="#tentang">Tentang</a>
+            <a href="#kontak">Kontak</a>
+        </div>
+    </div>
+
+    <!-- SPACER -->
+    <div class="spacer"></div>
+
     <!-- HERO -->
-    <div class="hero">
+    <div class="hero" id="hero">
         <div class="hero-content">
             <h1>Selamat Datang di Website zK</h1>
             <p>Web modern & premium — desain clean, elegan, cepat, dan responsif.</p>
@@ -165,46 +163,25 @@
         </div>
     </div>
 
-    <!-- INFO TERBARU -->
-    <section class="news" id="berita">
+    <!-- BERITA -->
+    <div class="section" id="berita">
         <h2>Info Terbaru</h2>
 
-        <div class="news-container">
+        <div class="card">Update Aplikasi Kinerja v4.0 — Tampilan baru premium.</div>
+        <div class="card">Panduan Penggunaan Website — Klik halaman panduan.</div>
+        <div class="card">Roadmap 2025 — Banyak fitur baru akan datang!</div>
+    </div>
 
-            <div class="news-card">
-                <h3>Update Aplikasi Kinerja v4.0</h3>
-                <p class="tanggal">24 November 2025</p>
-                <p>Aplikasi Kinerja zK kini hadir dengan tampilan baru yang lebih premium, cepat, dan responsif.</p>
-                <a href="#" class="btn-read">Baca Selengkapnya</a>
-            </div>
-
-            <div class="news-card">
-                <h3>Panduan Penggunaan Website</h3>
-                <p class="tanggal">24 November 2025</p>
-                <p>Cara lengkap mengoperasikan website pribadi zK untuk project dan aplikasi ASN.</p>
-                <a href="cara-penggunaan.html" class="btn-read">Lihat Panduan</a>
-            </div>
-
-            <div class="news-card">
-                <h3>Roadmap Aplikasi 2025</h3>
-                <p class="tanggal">Coming Soon</p>
-                <p>Fitur-fitur baru yang akan hadir: dashboard modern, panel profil, dan sistem PDF otomatis.</p>
-                <a href="#" class="btn-read">Segera</a>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- TENTANG (DIPINDAH KE PALING BAWAH) -->
+    <!-- TENTANG -->
     <div class="section" id="tentang">
         <h2>Tentang Saya</h2>
         <div class="card">
-            <p>Halo! Saya <b>zK</b>. Ini adalah landing page premium buatan sendiri — tidak pakai WordPress atau Blogspot.</p>
+            <p>Saya <b>zK</b>. Ini landing page premium buatan sendiri — bukan WordPress, bukan Blogspot.</p>
         </div>
     </div>
 
     <!-- KONTAK -->
-    <div class="section">
+    <div class="section" id="kontak">
         <h2>Kontak</h2>
         <div class="card">
             Email: <b>kamu@my.id</b><br>
