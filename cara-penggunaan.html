@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cara Penggunaan Aplikasi — zK</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: #0d0d0d;
+            color: #eaeaea;
+        }
+
+        header {
+            background: #111;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #222;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            color: cyan;
+            text-shadow: 0 0 12px cyan;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+
+        h2 {
+            color: cyan;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px cyan;
+        }
+
+        p {
+            line-height: 1.7;
+            opacity: 0.9;
+        }
+
+        .step {
+            background: #1a1a1a;
+            padding: 20px;
+            border-left: 4px solid cyan;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 12px rgba(0,255,255,0.1);
+        }
+
+        .step h3 {
+            margin: 0;
+            color: #00eaff;
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: cyan;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #999;
+            background: #111;
+            margin-top: 40px;
+            border-top: 1px solid #222;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Panduan Penggunaan Aplikasi “V.?_bY.zK x GPT”</h1>
+</header>
+
+<div class="container">
+
+    <p>Halaman ini dibuat untuk membantu pengguna memahami cara operasional aplikasi pribadi <b>zK</b> — aplikasi berbasis Python/Tkinter yang mendukung pencatatan data pegawai, LKH harian–bulanan–tahunan, dan fitur PDF otomatis.</p>
+
+    <h2>1. Persiapan Awal</h2>
+
+    <div class="step">
+        <h3>• Pastikan Folder “data” Lengkap</h3>
+        <p>Aplikasi membutuhkan folder <b>/data</b> yang berisi:</p>
+        <ul>
+            <li>profil.json</li>
+            <li>atasan.json</li>
+            <li>penilai.json</li>
+            <li>pekerjaan.json</li>
+            <li>lkh.json</li>
+            <li>Gambar background (bg_dashboard.png, bg_profil.png, dll)</li>
+        </ul>
+    </div>
+
+    <div class="step">
+        <h3>• Jalankan Aplikasi</h3>
+        <p>Buka file <b>main_final.py</b> menggunakan Python 3.10+.  
+        Aplikasi akan menampilkan halaman dashboard dengan data waktu realtime.</p>
+    </div>
+
+    <h2>2. Mengisi Data Pegawai</h2>
+
+    <div class="step">
+        <h3>• Buka Menu “Profil”</h3>
+        <p>Klik tombol <b>Profil</b> pada sidebar. Masukkan data seperti:</p>
+        <ul>
+            <li>Nama Pegawai</li>
+            <li>NIP</li>
+            <li>Jabatan</li>
+            <li>Unit Kerja</li>
+        </ul>
+        <p>Simpan → Data tampil otomatis di Dashboard.</p>
+    </div>
+
+    <h2>3. Mengelola Uraian Pekerjaan</h2>
+
+    <div class="step">
+        <h3>• Buka Panel Uraian</h3>
+        <p>Di halaman Profil, klik tombol “+ Uraian Kerja”.  
+        Masukkan uraian pekerjaan sesuai tupoksi masing-masing.</p>
+        <p>Semua data langsung tersimpan ke <b>pekerjaan.json</b>.</p>
+    </div>
+
+    <h2>4. Mengisi LKH Harian</h2>
+
+    <div class="step">
+        <h3>• Buka Menu “LKH”</h3>
+        <p>Masukkan:</p>
+        <ul>
+            <li>Tanggal</li>
+            <li>Uraian pekerjaan</li>
+            <li>Jumlah (Jml)</li>
+        </ul>
+        <p>Simpan → otomatis masuk database <b>lkh.json</b>.</p>
+    </div>
+
+    <h2>5. Export PDF (Harian, Bulanan, Tahunan)</h2>
+
+    <div class="step">
+        <h3>• Klik Tombol “PDF”</h3>
+        <p>Sistem akan membuat file PDF lengkap dengan:</p>
+        <ul>
+            <li>Header logo KUA</li>
+            <li>Tabel rapi</li>
+            <li>Align teks otomatis</li>
+        </ul>
+        <p>PDF tersimpan di folder yang sama.</p>
+    </div>
+
+    <h2>6. Penyimpanan EXE</h2>
+
+    <div class="step">
+        <h3>• Jika dijadikan EXE</h3>
+        <p>Pastikan folder <b>/data</b> ikut diletakkan di samping file EXE.  
+        Jika tidak, background + JSON tidak terbaca.</p>
+    </div>
+
+    <p style="opacity:0.7; margin-top:30px;">
+        Halaman ini akan terus diperbarui sesuai perkembangan fitur aplikasi.
+    </p>
+
+    <p><a href="index.html">← Kembali ke Homepage</a></p>
+
+</div>
+
+<footer>
+    © 2025 — zK Personal App “V.?_bY.zK x GPT”
+</footer>
+
+</body>
+</html>
