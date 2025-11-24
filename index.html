@@ -27,6 +27,93 @@
 
     </div>
 </section>
+<!-- INFO TERBARU -->
+<section class="news" id="berita">
+    <h2>Info Terbaru</h2>
+
+    <div class="news-container">
+
+        <div class="news-card">
+            <h3>Update Aplikasi Kinerja v4.0</h3>
+            <p class="tanggal">24 November 2025</p>
+            <p>Aplikasi Kinerja zK kini hadir dengan tampilan baru yang lebih premium, cepat, dan responsif.</p>
+            <a href="#" class="btn-read">Baca Selengkapnya</a>
+        </div>
+
+        <div class="news-card">
+            <h3>Panduan Penggunaan Website</h3>
+            <p class="tanggal">24 November 2025</p>
+            <p>Cara lengkap mengoperasikan website pribadi zK untuk project dan aplikasi ASN.</p>
+            <a href="cara-penggunaan.html" class="btn-read">Lihat Panduan</a>
+        </div>
+
+        <div class="news-card">
+            <h3>Roadmap Aplikasi 2025</h3>
+            <p class="tanggal">Coming Soon</p>
+            <p>Fitur-fitur baru yang akan hadir: dashboard modern, panel profil, dan sistem PDF otomatis.</p>
+            <a href="#" class="btn-read">Segera</a>
+        </div>
+
+    </div>
+</section>
+
+<style>
+.news {
+    padding: 80px 20px;
+    text-align: center;
+    background: #000;
+    color: white;
+}
+
+.news h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.news-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.news-card {
+    background: #111;
+    border-radius: 14px;
+    padding: 25px;
+    border: 1px solid #222;
+    transition: 0.3s;
+}
+
+.news-card:hover {
+    transform: translateY(-6px);
+    border-color: #00ffe1;
+}
+
+.news-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.tanggal {
+    font-size: 14px;
+    opacity: 0.6;
+    margin-bottom: 15px;
+}
+
+.btn-read {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #00ffe1;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    margin-top: 15px;
+}
+</style>
 
 <style>
 .news {
