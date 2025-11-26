@@ -1,198 +1,90 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>zK — Landing Page</title>
+    <title>Bootstrap Style Page</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
         body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: #0d0d0d;
+            background: linear-gradient(145deg, #5a2a82, #6d3fa6);
             color: white;
-            scroll-behavior: smooth; /* SMOOTH SCROLL */
+            text-align: center;
         }
 
-        /* NAVBAR GLASS */
-        .navbar {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%;
-            padding: 15px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            backdrop-filter: blur(12px);
-            background: rgba(255, 255, 255, 0.05);
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            z-index: 1000;
-        }
-
-        .navbar .logo {
-            font-size: 1.4rem;
-            font-weight: bold;
-            color: cyan;
-            text-shadow: 0 0 10px cyan;
-        }
-
-        .navbar a {
-            margin-left: 25px;
-            color: white;
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
-        .navbar a:hover {
-            color: cyan;
-            text-shadow: 0 0 10px cyan;
-        }
-
-        /* HERO */
-        .hero {
-            height: 90vh;
-            background: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1400&q=80')
-                        center/cover no-repeat fixed;
-            display: flex;
+        /* Box Logo B */
+        .logo-box {
+            border: 2px solid rgba(255,255,255,0.6);
+            border-radius: 16px;
+            display: inline-flex;
             justify-content: center;
             align-items: center;
-            text-align: center;
-            padding: 0 20px;
-            position: relative;
-        }
-
-        .hero::after {
-            content: "";
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(0,0,0,0.5);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            text-shadow: 0 0 15px cyan;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 25px;
-            opacity: 0.9;
-        }
-
-        .btn-primary {
-            padding: 12px 25px;
-            background: cyan;
-            color: black;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .btn-primary:hover {
-            background: white;
-        }
-
-        /* SECTION */
-        .section {
-            padding: 80px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
-
-        .section h2 {
-            text-align: center;
+            width: 150px;
+            height: 150px;
+            margin-top: 90px;
             margin-bottom: 20px;
-            color: cyan;
-            text-shadow: 0 0 10px cyan;
         }
 
-        .card {
-            background: #1a1a1a;
-            padding: 25px;
-            margin: 15px 0;
-            border-radius: 10px;
-            border-left: 5px solid cyan;
-            box-shadow: 0 0 15px rgba(0,255,255,0.15);
+        .logo-box h1 {
+            font-size: 80px;
+            margin: 0;
+            font-weight: 600;
         }
 
-        /* FOOTER */
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #bbbbbb;
-            font-size: 0.8rem;
+        /* Mobile spacing fix */
+        @media(max-width:600px) {
+            .logo-box {
+                width: 120px;
+                height: 120px;
+            }
+            .logo-box h1 {
+                font-size: 60px;
+            }
         }
-
-        /* SPACER SO NAVBAR NOT COVER CONTENT */
-        .spacer { height: 80px; }
-
     </style>
 </head>
+
 <body>
 
-    <!-- NAVBAR GLASS -->
-    <div class="navbar">
-        <div class="logo">zK</div>
-        <div class="menu">
-            <a href="#hero">Home</a>
-            <a href="#berita">Berita</a>
-            <a href="#tentang">Tentang</a>
-            <a href="#kontak">Kontak</a>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Bootstrap</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#">Getting started</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">CSS</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Components</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">JavaScript</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Customize</a></li>
+          </ul>
         </div>
-    </div>
+      </div>
+    </nav>
 
-    <!-- SPACER -->
-    <div class="spacer"></div>
-
-    <!-- HERO -->
-    <div class="hero" id="hero">
-        <div class="hero-content">
-            <h1>Selamat Datang di Website zK</h1>
-            <p>Web modern & premium — desain clean, elegan, cepat, dan responsif.</p>
-            <a href="#berita" class="btn-primary">Mulai Jelajah</a>
+    <!-- MAIN CONTENT -->
+    <div class="container">
+        <div class="logo-box">
+            <h1>B</h1>
         </div>
+
+        <h2 class="fw-bold mt-4">Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile-first projects on the web.</h2>
+
+        <a href="#" class="btn btn-outline-light btn-lg mt-4 px-5 py-2">
+            Download Bootstrap
+        </a>
+
+        <p class="mt-3" style="opacity:0.8;">Currently v5.3.2</p>
     </div>
 
-    <!-- BERITA -->
-    <div class="section" id="berita">
-        <h2>Info Terbaru</h2>
-
-        <div class="card">Update Aplikasi Kinerja v4.0 — Tampilan baru premium.</div>
-        <div class="card">Panduan Penggunaan Website — Klik halaman panduan.</div>
-        <div class="card">Roadmap 2025 — Banyak fitur baru akan datang!</div>
-    </div>
-
-    <!-- TENTANG -->
-    <div class="section" id="tentang">
-        <h2>Tentang Saya</h2>
-        <div class="card">
-            <p>Saya <b>zK</b>. Ini landing page premium buatan sendiri — bukan WordPress, bukan Blogspot.</p>
-        </div>
-    </div>
-
-    <!-- KONTAK -->
-    <div class="section" id="kontak">
-        <h2>Kontak</h2>
-        <div class="card">
-            Email: <b>kamu@my.id</b><br>
-            Instagram: <b>@usernamekamu</b>
-        </div>
-    </div>
-
-    <!-- FOOTER -->
-    <footer>
-        © 2025 zK — Website Premium Modern
-    </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
