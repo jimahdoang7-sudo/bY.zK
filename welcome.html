@@ -2,35 +2,122 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>HOME | Portal KUA</title>
+    <title>Home | Portal KUA</title>
+
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
-        body { background: #f3f3f3; }
-        .post-card img { height: 180px; object-fit: cover; }
-        .post-card { transition: 0.2s; }
-        .post-card:hover { transform: scale(1.02); }
+        body {
+            background: #eef0f3;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Container 80% tengah */
+        .main-container {
+            width: 80%;
+            margin: 40px auto;
+        }
+
+        /* Kolom konten utama */
+        .content-area {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Kolom widget */
+        .sidebar {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            height: fit-content;
+        }
+
+        .widget-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            border-left: 4px solid #0b8c3c;
+            padding-left: 10px;
+        }
     </style>
 </head>
 
-<body class="p-4">
+<body>
 
-<h1 class="mb-4">Postingan Terbaru</h1>
+<div class="main-container">
 
-<div id="posts" class="row gy-4">
-    <!-- Post akan muncul otomatis -->
+    <div class="row g-4">
+
+        <!-- ========================= -->
+        <!--   KONTEN UTAMA (70%)     -->
+        <!-- ========================= -->
+        <div class="col-md-8">
+            <div class="content-area">
+
+                <h2 class="mb-4">Postingan Terbaru</h2>
+
+                <!-- AREA POST CARD OTOMATIS -->
+                <div id="posts" class="row gy-4">
+                    <!-- Script akan menampilkan posting otomatis -->
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- ========================= -->
+        <!--     SIDEBAR (30%)        -->
+        <!-- ========================= -->
+        <div class="col-md-4">
+            <div class="sidebar">
+
+                <div class="widget">
+                    <h4 class="widget-title">Widget 1 - Informasi</h4>
+                    <p>Tempat untuk informasi penting, pengumuman, link cepat, dll.</p>
+                </div>
+
+                <hr>
+
+                <div class="widget">
+                    <h4 class="widget-title">Widget 2 - Arsip</h4>
+                    <ul>
+                        <li><a href="#">Januari 2025</a></li>
+                        <li><a href="#">Desember 2024</a></li>
+                        <li><a href="#">November 2024</a></li>
+                    </ul>
+                </div>
+
+                <hr>
+
+                <div class="widget">
+                    <h4 class="widget-title">Widget 3 - Link Penting</h4>
+                    <ul>
+                        <li><a href="#">SIMKAH</a></li>
+                        <li><a href="#">Kemenag RI</a></li>
+                        <li><a href="#">SIRAMAH</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
 </div>
 
+
+<!-- SCRIPT UNTUK MENAMPILKAN POST (dari Test B sebelumnya) -->
 <script>
-// Daftar file posting (manual test — nanti gua bikin auto-scan folder)
 const postFiles = [
-    "posts/post1.html",
+    "posts/post1.html"
 ];
 
 async function loadPost(path) {
     const res = await fetch(path);
     const text = await res.text();
 
-    // ambil YAML metadata
     const yamlMatch = text.match(/---([\s\S]*?)---/);
     if (!yamlMatch) return;
 
@@ -43,15 +130,14 @@ async function loadPost(path) {
         meta[k.trim()] = v.join(":").trim().replace(/"/g, "");
     });
 
-    // masukkan ke card
-    const postsDiv = document.getElementById("posts");
-    postsDiv.innerHTML += `
-        <div class="col-md-4">
-            <div class="card post-card shadow-sm">
-                <img src="${meta.thumbnail}" class="card-img-top">
+    // Card posting
+    document.getElementById("posts").innerHTML += `
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <img src="${meta.thumbnail}" class="card-img-top" style="height:200px; object-fit:cover;">
                 <div class="card-body">
                     <small class="text-muted">${meta.date} • ${meta.category}</small>
-                    <h5 class="card-title mt-2">${meta.title}</h5>
+                    <h4 class="mt-2">${meta.title}</h4>
                     <a href="${path}" class="btn btn-success btn-sm mt-2">Baca Selengkapnya</a>
                 </div>
             </div>
