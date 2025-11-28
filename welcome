@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Selamat Datang - KUA Kecamatan Tangerang</title>
+</head>
+
+<body style="font-family: Arial; padding: 40px;">
+
+<h1>Selamat Datang di Website Resmi KUA Kecamatan Tangerang</h1>
+
+<p>
+    Assalamu’alaikum warahmatullahi wabarakatuh.<br><br>
+
+    Selamat datang di layanan digital KUA Kecamatan Tangerang.  
+    Melalui halaman ini, kami menyediakan berbagai informasi dan fitur penting 
+    terkait pelayanan pencatatan nikah, bimbingan masyarakat, administrasi, 
+    hingga publikasi kegiatan KUA.
+</p>
+
+<h3>Apa yang bisa Anda akses dari sini?</h3>
+
+<ul>
+    <li>Informasi layanan KUA Kecamatan Tangerang</li>
+    <li>Aplikasi internal pegawai</li>
+    <li>Tools digital dan formulir</li>
+    <li>Flipbook & dokumen publik</li>
+    <li>Kontak pelayanan & jadwal operasional</li>
+</ul>
+
+<p>
+    Silakan gunakan menu di atas untuk mengakses halaman lainnya.<br>
+    Wassalamu’alaikum warahmatullahi wabarakatuh.
+</p>
+
+<a href="index.html">← Kembali ke Halaman Utama</a>
+
+</body>
+</html>
